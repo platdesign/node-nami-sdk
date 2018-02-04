@@ -1,0 +1,23 @@
+{
+  "name": "@platdesign/nami-sdk",
+  "description": "(unofficial) NaMi SDK",
+  "author": [
+    {
+      "name": "Christian Blaschke",
+      "email": "mail@platdesign.de",
+      "url": "https://github.com/platdesign"
+    }
+  ],
+  "version": "0.0.0",
+  "dependencies": {
+    "@platdesign/nami-api-client": "^1.0.0"
+  },
+  "repository": "https://github.com/platdesign/node-nami-sdk.git",
+  "devDependencies": {
+    "code": "^5.1.2",
+    "mocha": "^5.0.0"
+  },
+  "scripts": {
+    "test":"mocha"
+  }
+}
