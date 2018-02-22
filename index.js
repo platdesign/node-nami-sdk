@@ -71,6 +71,25 @@ module.exports = class NamiSDK {
 	}
 
 
+	/**
+	 * Request member roles (ids only)
+	 * @param  {Number} memberId
+	 * @return {Promise}          resolves with data from _request result
+	 */
+	async getMemberRolesShort(memberId, query = {}) {
+		return this.callService('GET', `/nami/zugeordnete-taetigkeiten/filtered-for-navigation/gruppierung-mitglied/mitglied/${memberId}`, { query });
+	}
+
+
+	/**
+	 * Request member role details
+	 * @param  {Number} memberId
+	 * @return {Promise}          resolves with data from _request result
+	 */
+	async getMemberRoleDetails(memberId, roleId, query = {}) {
+		return this.callService('GET', `/nami/zugeordnete-taetigkeiten/filtered-for-navigation/gruppierung-mitglied/mitglied/${memberId}/${roleId}`, { query });
+	}
+
 
 
 	/**

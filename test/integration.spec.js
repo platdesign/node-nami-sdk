@@ -114,6 +114,29 @@ describe('Requests', function() {
 
 
 
+	describe('getMemberRolesShort()', () => {
+
+		it('should return expected schema', async () => {
+
+			let res1 = await nami.getMembersShort();
+
+			let res2 = await nami.getMemberRolesShort(res1.data[0].id);
+
+			let res3 = await nami.getMemberRoleDetails(res1.data[0].id, res2.data[0].id);
+
+			expect(res3.success)
+				.to.be.true();
+
+			expect(res3.data)
+				.to.be.an.object();
+
+		});
+
+	});
+
+
+
+
 
 
 	describe('getMemberDetails()', () => {
