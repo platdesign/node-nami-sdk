@@ -19,5 +19,8 @@
   },
   "scripts": {
     "test": "mocha"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
